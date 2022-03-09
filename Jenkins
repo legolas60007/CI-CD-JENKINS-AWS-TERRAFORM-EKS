@@ -52,5 +52,5 @@ pipeline {
                 sh 'kubectl apply -f cluster-autoscaler.yaml'
                                      }
                     }
-    }
+         }
 }
