@@ -38,19 +38,6 @@ pipeline {
             steps {         
                 sh label: '', script: 'terraform apply --auto-approve'    
                 }
-            }
-        stage ("Kubernetes export") {
-            steps {         
-                sh 'aws eks --region eu-west-3 update-kubeconfig --name tasts1'
-                  }
-                                     }
-        stage ("Kubernetes export") {
-            steps {         
-                sh 'kubectl apply -f deployment.yaml'
-                sh 'kubectl apply -f public-lb.yaml'
-                sh 'kubectl apply -f private-lb.yaml'
-                sh 'kubectl apply -f cluster-autoscaler.yaml'
-                                     }
-                   }
-         }
-}
+            }  
+        }
+    }
