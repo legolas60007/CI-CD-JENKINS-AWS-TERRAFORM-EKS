@@ -51,6 +51,6 @@ pipeline {
                 sh 'kubectl apply -f private-lb.yaml'
                 sh 'kubectl apply -f cluster-autoscaler.yaml'
                                      }
-                    }
+                   }
          }
 }
