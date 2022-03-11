@@ -9,11 +9,7 @@ pipeline {
                 sh 'echo Checkout Correcto' 
             }
         }
-        stage ("terraform destroy") {
-            steps {
-                sh label: '', script: 'terraform destroy --auto-approve'
-            }
-        }
+      
         stage ("terraform init") {
             steps {
                 sh label: '', script: 'terraform init'
