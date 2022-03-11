@@ -32,7 +32,7 @@ pipeline {
         }
         stage ("terraform apply") {
             steps {         
-                sh label: '', script: 'terraform apply --auto-approve'    
+                sh label: '', script: 'terraform apply --auto-approve || true"   
                 }
             }  
         }
